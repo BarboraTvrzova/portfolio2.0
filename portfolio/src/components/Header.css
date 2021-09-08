@@ -1,0 +1,66 @@
+.hero {
+  background-image: url('../images/homepage/desktop/image-homepage-hero2@2x.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 600px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 56px;
+  width: 445px;
+  height: 357px;
+  background-color: #fafafa;
+}
+
+.btn.btn-about {
+  background: #203a4c;
+  color: #fafafa;
+  border: none;
+  position: relative;
+  padding: 17px 35px 17px 82px;
+}
+
+.about-inner {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn-about:hover {
+  background-color: #5fb4a2;
+}
+.btn.btn-about:hover .about-inner svg g {
+  stroke: #fff;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-size: 100% 271px;
+    background-position-y: 0;
+    height: 543px;
+  }
+  .hero-text {
+    padding-top: 0;
+    height: 248px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    background-image: url('../images/homepage/small-hero.jpeg');
+  }
+}

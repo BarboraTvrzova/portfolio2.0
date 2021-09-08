@@ -1,0 +1,153 @@
+.interested {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-bottom: 150px;
+}
+
+.line {
+  height: 1px;
+  width: 47.75%;
+  background: rgba(51, 50, 61, 0.15);
+}
+
+.interested h2 {
+  width: 30%;
+}
+
+.footer-bottom {
+  background: #33323d;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.footer-bottom-inner {
+  padding-left: 11%;
+  padding-right: 11%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+footer .footer-nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav-links li {
+  padding-left: 42px;
+  text-transform: uppercase;
+  color: white;
+}
+
+footer .footer-nav-links li a {
+  color: white;
+}
+footer .footer-nav-links li:hover a {
+  color: #5fb4a2;
+}
+.logo-white {
+  width: 100px;
+  height: 32px;
+}
+
+.icons {
+  width: 104px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .interested {
+    padding-bottom: 96px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .line {
+    width: 17%;
+  }
+
+  .interested h2 {
+    width: 51%;
+  }
+
+  .footer-bottom-inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 767px) {
+  .interested {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 80px;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interested h2 {
+    text-align: center;
+    padding-bottom: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(51, 50, 61, 0.15);
+    padding-top: 80px;
+  }
+
+  .line {
+    display: none;
+  }
+  .footer-bottom {
+    height: 354px;
+  }
+  .footer-bottom-inner {
+    padding-left: 8%;
+    padding-right: 8%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    height: 100%;
+  }
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .footer-nav-links {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+  .footer-nav-links li {
+    padding-left: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .logo-white {
+    width: 130px;
+    margin-bottom: 6px;
+  }
+}

@@ -1,0 +1,132 @@
+.portfolio {
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-top: 64px;
+  padding-bottom: 115px;
+}
+
+.projects {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: flex;
+  height: 500px;
+  margin-top: 80px;
+}
+
+.project:first-of-type {
+  margin-top: 0px;
+}
+
+.project:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.project-image img {
+  width: 80%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.project-text-container {
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-text {
+  width: 51%;
+  border-top: 1px solid rgba(51, 50, 61, 0.15);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-text p {
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+Link,
+a,
+Link:visited {
+  color: #33323d;
+}
+
+@media (max-width: 1024px) {
+  .portfolio {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .project {
+    height: 418px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-image {
+    width: 49%;
+    height: 314px;
+  }
+  .project-text-container {
+    width: 40%;
+  }
+  .project-text {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 14px;
+    padding-top: 32px;
+  }
+  .project,
+  .project:nth-of-type(2n) {
+    flex-direction: column;
+    height: unset;
+    width: 100%;
+  }
+  .project-image,
+  .project-text,
+  .project-text-container {
+    width: 100%;
+  }
+  .project-image img {
+    object-fit: cover;
+  }
+
+  .project-text {
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-top: 32px;
+  }
+  .project {
+    margin-top: 72px;
+  }
+  .projects {
+    padding-top: 0;
+  }
+}
