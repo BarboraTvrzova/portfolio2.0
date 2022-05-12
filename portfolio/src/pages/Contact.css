@@ -16,6 +16,7 @@
   padding-top: 47px;
   padding-bottom: 47px;
   border-top: solid 1px rgba(51, 50, 61, 0.15);
+  position: relative;
 }
 
 .row-text {
@@ -75,6 +76,32 @@ label {
 
 a {
   color: #33323d;
+}
+
+#contact-form-disabled {
+  position: relative;
+}
+#contact-form-disabled::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+#contact-form-disabled::before {
+  width: 100%;
+  height: 25px;
+  content: 'This form has been temporarily disabled';
+  color: tomato;
+  font-family: 'Public Sans', sans-serif;
+  z-index: 5;
+  position: absolute;
+  top: 15px;
+  text-align: center;
+  font-size: 18px;
 }
 
 @media (max-width: 1024px) {

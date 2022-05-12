@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-inner">
           <nav className="footer-nav">
-            <div className="logo-white"><img src={whitelogo} alt="" /></div>
+            <div className="logo-white"><a href="/"><img src={whitelogo} alt="" /></a></div>
             <ul className="footer-nav-links">
               <li><a href="/">Home</a></li>
               <li><a href="/portfolio">Portfolio</a></li>
@@ -29,9 +29,9 @@ const Footer = () => {
             </ul>
           </nav>
           <div className="icons">
-            <img src={git} alt="" />
-            <img src={twitter} alt="" />
-            <img src={linkedin} alt="" />
+            <a href="https://github.com/BarboraTvrzova" target="_blank"><img src={git} alt="" /></a>
+            <a href="https://twitter.com/BTvrzova" target="_blank"><img src={twitter} alt="" /></a>
+            <a href="https://www.linkedin.com/in/barbora-torres-1744741bb/" target="_blank"><img src={linkedin} alt="" /></a>
 
           </div>
         </div>
