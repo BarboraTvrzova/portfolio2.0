@@ -29,13 +29,14 @@
   width: 48%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-image img {
   width: 80%;
   height: 90%;
-  object-fit: contain;
+  height: 110%;
 }
 
 .project-text-container {

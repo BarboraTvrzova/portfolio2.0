@@ -3,6 +3,7 @@
   padding-right: 11%;
   padding-top: 64px;
   padding-bottom: 109px;
+  min-height: calc(100vh - 80px);
 }
 
 .contact-details {
@@ -27,8 +28,18 @@
   padding-bottom: 24px;
 }
 
-.row-text .icons img {
-  filter: invert(0.8);
+.row-text .icons svg * {
+  fill: #33323d;
+}
+
+.icons svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.icons svg:hover * {
+  fill: #5fb4a2;
 }
 
 .form-field {
@@ -37,7 +48,7 @@
   margin-bottom: 24px;
 }
 label {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 30px;
@@ -50,7 +61,7 @@ label {
   padding: 9px 16px;
   border: none;
   background-color: rgba(51, 50, 61, 0.1);
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   color: rgba(51, 50, 61, 1);
 }
 
@@ -59,7 +70,7 @@ label {
   border: none;
   background-color: rgba(51, 50, 61, 0.1);
   height: 96px;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   color: rgba(51, 50, 61, 1);
 }
 
@@ -73,6 +84,9 @@ label {
   color: #fafafa;
   border: none;
 }
+.btn-message:hover {
+  border: none;
+}
 
 a {
   color: #33323d;
@@ -82,7 +96,7 @@ a {
   position: relative;
 }
 #contact-form-disabled::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -94,9 +108,9 @@ a {
 #contact-form-disabled::before {
   width: 100%;
   height: 25px;
-  content: 'This form has been temporarily disabled';
+  content: "This form has been temporarily disabled";
   color: tomato;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   z-index: 5;
   position: absolute;
   top: 15px;

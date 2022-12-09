@@ -1,5 +1,5 @@
 h1 {
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -8,7 +8,7 @@ h1 {
   color: #33323d;
 }
 h2 {
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -17,7 +17,7 @@ h2 {
   color: #33323d;
 }
 h3 {
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -26,7 +26,7 @@ h3 {
   color: #33323d;
 }
 p {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -36,7 +36,7 @@ p {
 
 li {
   list-style: none;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 2px;
@@ -56,7 +56,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -64,6 +64,12 @@ a:visited {
   letter-spacing: 2px;
   border: 1px solid #33323d;
   width: fit-content;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: #5fb4a2 solid 1px;
+  color: #5fb4a2;
 }
 
 .home {

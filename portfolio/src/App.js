@@ -4,12 +4,12 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
-    key: 7,
+    key: 8,
     name: "Shortly",
     color: "#84b8a6",
     description:
@@ -110,21 +110,25 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Switch>
-          <Route isExact path="/portfolio">
-            <Portfolio
-              projects={projects}
-              showProject={showProject}
-              activeProject={activeProject}
-            />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <AnimatePresence>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Switch>
+              <Route isExact path="/portfolio">
+                <Portfolio
+                  projects={projects}
+                  showProject={showProject}
+                  activeProject={activeProject}
+                />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </motion.div>
+        </AnimatePresence>
         <Footer />
       </div>
     </BrowserRouter>
