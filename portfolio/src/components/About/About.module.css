@@ -1,0 +1,72 @@
+.about {
+  display: flex;
+  padding-top: 75px;
+  width: 90.35%;
+  padding-bottom: 150px;
+}
+
+.about .picture_container {
+  width: 53%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about .picture {
+  width: 100%;
+  height: 110%;
+  background: url("../../../public/images/homepage/desktop/bara.JPG") no-repeat
+    center center/cover;
+  object-fit: cover;
+  position: absolute;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 600px;
+  padding-top: 50px;
+  padding-bottom: 46px;
+  border-top: 1px solid rgba(51, 50, 61, 0.15);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.15);
+  margin-left: 125px;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    width: 100%;
+  }
+  .about_text {
+    margin-left: 69px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding-top: 96px;
+    padding-top: 21px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  .about .picture_container {
+    width: 100%;
+    height: 346px;
+  }
+  .about_text {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 32px;
+    justify-content: space-evenly;
+    padding-top: 32px;
+    border-bottom: none;
+    height: unset;
+    padding-bottom: 60px;
+  }
+  .about_text p {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+}

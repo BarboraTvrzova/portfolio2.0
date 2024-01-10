@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+@layer components {
+  h1 {
+    font-family: "Ibarra Real Nova", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.446429px;
+    color: #33323d;
+  }
+  h2 {
+    font-family: "Ibarra Real Nova", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: #33323d;
+  }
+  h3 {
+    font-family: "Ibarra Real Nova", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.285714px;
+    color: #33323d;
+  }
+  p {
+    font-family: "Public Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #33323d;
+  }
+
+  li {
+    list-style: none;
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    color: #33323d;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: #33323d;
+  }
+
+  .btn {
+    padding: 17px 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Public Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    border: 1px solid #33323d;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    border: #5fb4a2 solid 1px;
+    color: #5fb4a2;
+  }
+}
