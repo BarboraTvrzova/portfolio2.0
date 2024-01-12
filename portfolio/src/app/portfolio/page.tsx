@@ -2,18 +2,19 @@ import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
 import React from "react";
 
+export const commercial = [
+  {
+    key: 99,
+    name: "Campaigns",
+    color: "#b89184",
+    description: ".",
+    technologies: "",
+    url: "",
+    background: "",
+  },
+];
+
 export const projects = [
-  // {
-  //   key: 8,
-  //   name: "Shortly",
-  //   color: "#84b8a6",
-  //   description:
-  //     "This project required to build a simple app that lets user shorten a url. I have used Next.js and SCSS for styling, for functionality I used shrtco.de API. It was a simple application that only has one functionality. All links transition are for design purposes only. The sole functionality is to add a valid urls and get a short links that can be copied to clipboard.",
-  //   technologies: "Next.js, SCSS",
-  //   url: "https://barbora-t-url-shortener.netlify.app",
-  //   background:
-  //     "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-  // },
   {
     key: 7,
     name: "Coffee",

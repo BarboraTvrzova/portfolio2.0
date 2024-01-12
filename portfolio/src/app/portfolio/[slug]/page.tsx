@@ -1,25 +1,28 @@
 import Nav from "@/components/Nav";
 import Project from "@/components/Project";
 
-import { projects } from "../page";
+import { projects, commercial } from "../page";
 import Footer from "@/components/Footer";
+import SpotifyProjects from "@/components/SpotifyProjects";
 
+const all = [...commercial, ...projects];
 export async function generateStaticParams() {
-  return projects.map((project: any) => ({
+  return all.map((project: any) => ({
     slug: project.name.toLowerCase(),
   }));
 }
 
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
-  const project = projects.find(
-    (item) => item.name.toLowerCase() === params.slug,
-  );
+  const project = all.find((item) => item.name.toLowerCase() === params.slug);
 
   return (
     <>
       <div className="px-[8%] pb-4 pt-8 md:px-[5%] lg:px-[11%] lg:pt-16 md:pb-24 lg:pb-28 ">
         <Nav />
-        {project ? <Project activeProject={project} /> : null}
+        {project && project.key === 99 ? <SpotifyProjects /> : null}
+        {project && project.key !== 99 ? (
+          <Project activeProject={project} />
+        ) : null}
       </div>
       <Footer />
     </>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
@@ -5,6 +6,10 @@ import type { ProjectProps } from "../Project";
 import Link from "next/link";
 import Nav from "../Nav";
 import styles from "./Portfolio.module.css";
+import image_1 from "../../../public/commercial_projects/IMG_5468.jpg";
+import image_2 from "../../../public/commercial_projects/IMG_5469.png";
+import image_3 from "../../../public/commercial_projects/IMG_5470.png";
+import image_4 from "../../../public/commercial_projects/IMG_5471.png";
 
 const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
   const [url, setUrl] = useState("/portfolio");
@@ -29,9 +34,72 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
           transition: { duration: 0.3, delay: 0.2 },
         }}
       >
-        <div className="py-4">
-          <h2>Commercial projects</h2>
-          <p>Coming soon</p>
+        <div>
+          <div className="py-4">
+            <h2>Commercial projects</h2>
+          </div>
+          <div className="py-9 border-b border-b-[rgba(51, 50, 61, 0.15)]">
+            <div className="bg-[#33323D] p-3 grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4">
+              <motion.div
+                animate={{
+                  scale: [0.98, 1, 0.98],
+                  transition: {
+                    duration: 0.6,
+                    repeat: Infinity,
+                    repeatDelay: 2.4,
+                  },
+                }}
+                className="w-full h-full flex justify-center items-center"
+              >
+                <img src={image_1.src} alt="" />
+              </motion.div>
+              <motion.div
+                animate={{
+                  scale: [0.98, 1, 0.98],
+                  transition: {
+                    duration: 0.6,
+                    delay: 0.6,
+                    repeat: Infinity,
+                    repeatDelay: 2.4,
+                  },
+                }}
+                className="w-full h-full flex justify-center items-center"
+              >
+                <img src={image_2.src} alt="" />
+              </motion.div>
+              <motion.div
+                animate={{
+                  scale: [0.98, 1, 0.98],
+                  transition: {
+                    duration: 0.6,
+                    delay: 1.2,
+                    repeat: Infinity,
+                    repeatDelay: 2.4,
+                  },
+                }}
+                className="w-full h-full flex justify-center items-center"
+              >
+                <img src={image_3.src} alt="" />
+              </motion.div>
+              <motion.div
+                animate={{
+                  scale: [0.98, 1, 0.98],
+                  transition: {
+                    duration: 0.6,
+                    delay: 1.8,
+                    repeat: Infinity,
+                    repeatDelay: 2.4,
+                  },
+                }}
+                className="w-full h-full flex justify-center items-center"
+              >
+                <img src={image_4.src} alt="" />
+              </motion.div>
+            </div>
+            <Link href={`${url}/campaigns`} className="btn mt-9 mx-auto">
+              Learn more
+            </Link>
+          </div>
         </div>
       </motion.div>
       {url ? (
