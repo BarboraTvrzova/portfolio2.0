@@ -31,7 +31,7 @@ const Nav = () => {
         >
           <div className={styles.logo}>
             <Link href="/">
-              <img src={logo.src} alt="Bara T." />
+              <img src={logo.src} alt="Bara T." className="w-full h-full" />
             </Link>
           </div>
         </motion.div>

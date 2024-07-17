@@ -43,7 +43,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
             </p>
           </div>
           <div className="pb-9 border-b border-b-[rgba(51, 50, 61, 0.15)]">
-            <Link href={`${url}/campaigns`}>
+            <Link href={`${url}/campaigns`} aria-label="Learn more - featured">
               <div className="bg-[#33323D] p-3 grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4 cursor-pointer">
                 <motion.div
                   animate={{
@@ -103,7 +103,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
               </div>
             </Link>
             <Link href={`${url}/campaigns`} className="btn mt-9 mx-auto">
-              Learn more
+              View featured section
             </Link>
           </div>
         </div>
@@ -174,6 +174,7 @@ const ProjectPreview = ({
           src={`/project-images/${project.name.toLowerCase()}.png`}
           alt=""
           style={{ y: y }}
+          loading="lazy"
         />
       </div>
       <motion.div className={styles.project_text_container}>

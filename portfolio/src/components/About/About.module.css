@@ -15,7 +15,7 @@
 .about .picture {
   width: 100%;
   height: 110%;
-  background: url("../../../public/images/homepage/desktop/bara.JPG") no-repeat
+  background: url("../../../public/images/homepage/desktop/bara.jpeg") no-repeat
     center center/cover;
   object-fit: cover;
   position: absolute;

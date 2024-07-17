@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
 import { Metadata } from "next";
 import React from "react";

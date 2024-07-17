@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useRef } from "react";
 import styles from "./HeroSection.module.css";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Link from "next/link";
-import Nav from "../Nav";
 
 const HeroSection = () => {
   const refImage = useRef(null);
@@ -29,6 +29,16 @@ const HeroSection = () => {
       id="hero"
     >
       <div className={styles.hero} ref={refImage}>
+        <img
+          src="/images/homepage/desktop/image-homepage-hero2@2x.jpeg"
+          alt="Hero image"
+          className="absolute top-0 left-0 w-full h-full object-cover hidden lg:block"
+        />
+        <img
+          src="/images/homepage/small-hero.jpeg"
+          alt="Hero image"
+          className="absolute top-0 left-0 w-full object-contain lg:hidden block"
+        />
         <div className={styles.hero_text}>
           <h1>
             Hey, I’m Barbora Torres and I love building beautiful websites

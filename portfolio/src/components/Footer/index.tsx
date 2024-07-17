@@ -28,7 +28,11 @@ const Footer = () => {
           <nav className={styles.footer_nav} aria-label="navigation secondary">
             <div className={styles.logo_white}>
               <Link href="/">
-                <img src={whitelogo.src} alt="Bara T." />
+                <img
+                  src={whitelogo.src}
+                  alt="Bara T."
+                  className="w-full h-full"
+                />
               </Link>
             </div>
             <ul className={styles.footer_nav_links}>
