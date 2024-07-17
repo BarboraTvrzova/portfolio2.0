@@ -1,9 +1,4 @@
 .hero {
-  background-image: url("../../../public/images/homepage/desktop/image-homepage-hero2@2x.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
   height: 600px;
   display: flex;
   justify-content: left;
@@ -73,9 +68,6 @@
 }
 
 @media (max-width: 500px) {
-  .hero {
-    background-image: url("../../../public/images/homepage/small-hero.jpeg");
-  }
   .hero_text {
     min-height: 248px;
     padding-top: 0;

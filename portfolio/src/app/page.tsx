@@ -1,8 +1,5 @@
 import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import Nav from "@/components/Nav";
 import { Metadata } from "next";
 
 const aboutDescription =

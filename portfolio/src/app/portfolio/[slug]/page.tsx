@@ -1,9 +1,5 @@
-import Nav from "@/components/Nav";
 import Project from "@/components/Project";
-
 import { projects, commercial } from "../page";
-import Footer from "@/components/Footer";
-
 import Featured from "@/components/Featured";
 
 const all = [...commercial, ...projects];
