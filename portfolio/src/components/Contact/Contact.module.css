@@ -1,7 +1,4 @@
 .contact {
-  padding-left: 11%;
-  padding-right: 11%;
-  padding-top: 64px;
   padding-bottom: 109px;
   min-height: calc(100vh - 80px);
 }
@@ -123,18 +120,18 @@
   font-size: 18px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .contact {
-    padding-left: 5%;
-    padding-right: 5%;
     padding-bottom: 96px;
   }
   .row {
     flex-direction: column;
   }
-  .row-text {
-    width: 100%;
+
+  .row_text {
+    width: 80%;
   }
+
   .row h2 {
     padding-bottom: 26px;
   }
@@ -142,10 +139,11 @@
 
 @media (max-width: 767px) {
   .contact {
-    padding-left: 8%;
-    padding-right: 8%;
     padding-bottom: 80px;
-    padding-top: 32px;
+  }
+
+  .row_text {
+    width: 100%;
   }
 }
 

@@ -12,9 +12,9 @@ const About = ({ description }: { description: string }) => {
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
-    <motion.div
-      className={styles.about}
+    <motion.section
       id="about"
+      className={styles.about}
       ref={refImage}
       initial={{ opacity: 0, filter: "blur(10px)" }}
       animate={{
@@ -37,7 +37,7 @@ const About = ({ description }: { description: string }) => {
           Go to portfolio
         </a>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

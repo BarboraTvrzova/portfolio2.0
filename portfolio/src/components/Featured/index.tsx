@@ -62,7 +62,7 @@ const Featured = () => {
           <div className=" bg-[#33323D] p-3 grid grid-cols-4 gap-3 md:grid-cols-4 lg:grid-cols-4">
             <a href="https://open.spotify.com/presents/tui" target="_blank">
               <div className="w-full h-full flex justify-center items-center po">
-                <img src={image_1.src} alt="" />
+                <img src={image_1.src} alt="Campaign 1" />
               </div>
             </a>
             <a
@@ -70,7 +70,7 @@ const Featured = () => {
               target="_blank"
             >
               <div className="w-full h-full flex justify-center items-center">
-                <img src={image_2.src} alt="" />
+                <img src={image_2.src} alt="Campaign 2" />
               </div>
             </a>
             <a
@@ -78,12 +78,12 @@ const Featured = () => {
               target="_blank"
             >
               <div className="w-full h-full flex justify-center items-center">
-                <img src={image_3.src} alt="" />
+                <img src={image_3.src} alt="Campaign 3" />
               </div>
             </a>
             <a href="https://open.spotify.com/presents/pepsi" target="_blank">
               <div className="w-full h-full flex justify-center items-center">
-                <img src={image_4.src} alt="" />
+                <img src={image_4.src} alt="Campaign 4" />
               </div>
             </a>
           </div>

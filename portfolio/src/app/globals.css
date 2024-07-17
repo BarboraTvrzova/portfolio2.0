@@ -86,4 +86,8 @@ body {
     border: #5fb4a2 solid 1px;
     color: #5fb4a2;
   }
+
+  .container-full {
+    @apply px-[8%] md:px-[5%] lg:px-[11%];
+  }
 }

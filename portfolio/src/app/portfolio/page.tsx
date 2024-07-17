@@ -99,14 +99,7 @@ export const metadata: Metadata = {
 };
 
 const PortfolioPage = () => {
-  return (
-    <>
-      <div>
-        <Portfolio projects={projects} />
-      </div>
-      <Footer />
-    </>
-  );
+  return <Portfolio projects={projects} />;
 };
 
 export default PortfolioPage;
