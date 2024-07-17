@@ -11,7 +11,6 @@ import Svg from "react-inlinesvg";
 export const ContactUs = ({ text }: { text: string }) => {
   return (
     <motion.div className={styles.contact}>
-      <Nav />
       <motion.div
         className={styles.contact_details}
         initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -21,7 +20,7 @@ export const ContactUs = ({ text }: { text: string }) => {
           transition: { duration: 0.3, delay: 0.2 },
         }}
       >
-        <div className={styles.row}>
+        <section id="get-in-touch" className={styles.row}>
           <h2>Get in Touch</h2>
           <div className={styles.row_text}>
             <p>{text}</p>
@@ -38,7 +37,7 @@ export const ContactUs = ({ text }: { text: string }) => {
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
         <ContactForm />
       </motion.div>

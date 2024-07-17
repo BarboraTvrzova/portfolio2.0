@@ -25,10 +25,10 @@ const Footer = () => {
 
       <div className={styles.footer_bottom}>
         <div className={styles.footer_bottom_inner}>
-          <nav className={styles.footer_nav}>
+          <nav className={styles.footer_nav} aria-label="navigation secondary">
             <div className={styles.logo_white}>
               <Link href="/">
-                <img src={whitelogo.src} alt="" />
+                <img src={whitelogo.src} alt="Bara T." />
               </Link>
             </div>
             <ul className={styles.footer_nav_links}>
@@ -44,13 +44,18 @@ const Footer = () => {
             </ul>
           </nav>
           <div className={styles.icons}>
-            <a href="https://github.com/BarboraTvrzova" target="_blank">
+            <a
+              href="https://github.com/BarboraTvrzova"
+              target="_blank"
+              aria-label="Github"
+            >
               <Svg src={git.src} />
             </a>
 
             <a
               href="https://www.linkedin.com/in/barbora-torres-1744741bb/"
               target="_blank"
+              aria-label="LinkedIn"
             >
               <Svg src={linkedin.src} />
             </a>

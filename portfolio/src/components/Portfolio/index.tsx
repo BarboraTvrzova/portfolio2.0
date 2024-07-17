@@ -24,8 +24,8 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
 
   return (
     <motion.div className={styles.portfolio}>
-      <Nav />
-      <motion.div
+      <motion.section
+        id="featured"
         className={styles.projects}
         initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={{
@@ -35,7 +35,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
         }}
       >
         <div>
-          <div className="py-6">
+          <div className="pb-6">
             <h2>Featured</h2>
             <p className="mt-2">
               These campaigns are currently live. Click to see more info about
@@ -56,7 +56,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
                   }}
                   className="w-full h-full flex justify-center items-center"
                 >
-                  <img src={image_1.src} alt="" />
+                  <img src={image_1.src} alt="Featured project 1" />
                 </motion.div>
                 <motion.div
                   animate={{
@@ -70,7 +70,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
                   }}
                   className="w-full h-full flex justify-center items-center"
                 >
-                  <img src={image_2.src} alt="" />
+                  <img src={image_2.src} alt="Featured project 2" />
                 </motion.div>
                 <motion.div
                   animate={{
@@ -84,7 +84,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
                   }}
                   className="w-full h-full flex justify-center items-center"
                 >
-                  <img src={image_3.src} alt="" />
+                  <img src={image_3.src} alt="Featured project 3" />
                 </motion.div>
                 <motion.div
                   animate={{
@@ -98,7 +98,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
                   }}
                   className="w-full h-full flex justify-center items-center"
                 >
-                  <img src={image_4.src} alt="" />
+                  <img src={image_4.src} alt="Featured project 4" />
                 </motion.div>
               </div>
             </Link>
@@ -107,9 +107,10 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
             </Link>
           </div>
         </div>
-      </motion.div>
+      </motion.section>
 
-      <motion.div
+      <motion.section
+        id="commercial"
         className={styles.projects}
         initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={{
@@ -122,10 +123,11 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
           <h2>Commercial Projects</h2>
           <p className="italic font-light">2022-2024</p>
         </div>
-      </motion.div>
+      </motion.section>
 
       {url ? (
-        <motion.div
+        <motion.section
+          id="personal-old"
           className={styles.projects}
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{
@@ -139,7 +141,7 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
             <p className="italic font-light">2020-2022</p>
           </div>
           <motion.div>{portfolio_old}</motion.div>
-        </motion.div>
+        </motion.section>
       ) : null}
     </motion.div>
   );

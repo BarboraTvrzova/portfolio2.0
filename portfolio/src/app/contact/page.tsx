@@ -1,5 +1,4 @@
 import { ContactUs } from "@/components/Contact";
-import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import React from "react";
 
@@ -12,12 +11,7 @@ export const metadata: Metadata = {
 };
 
 const ContactPage = () => {
-  return (
-    <>
-      <ContactUs text={text} />
-      <Footer />
-    </>
-  );
+  return <ContactUs text={text} />;
 };
 
 export default ContactPage;

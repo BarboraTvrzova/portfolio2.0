@@ -1,6 +1,8 @@
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import Nav from "@/components/Nav";
 import { Metadata } from "next";
 
 const aboutDescription =
@@ -14,11 +16,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="px-[8%] pt-8 md:px-[5%] lg:px-[11%] lg:pt-16">
-        <HeroSection />
-        <About description={aboutDescription} />
-      </div>
-      <Footer />
+      <HeroSection />
+      <About description={aboutDescription} />
     </>
   );
 }

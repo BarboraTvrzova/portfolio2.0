@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 54px;
   max-width: 100%;
   width: 100%;
 }
@@ -32,9 +31,6 @@
 }
 
 @media (max-width: 767px) {
-  .main_nav {
-    margin-bottom: 40px;
-  }
   .nav_links li {
     padding-left: 15px;
     font-size: 8px;

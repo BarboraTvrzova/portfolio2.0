@@ -15,7 +15,7 @@ const Nav = () => {
         transition: { duration: 0.3, delay: 0.1 },
       }}
     >
-      <nav className={styles.main_nav}>
+      <nav className={styles.main_nav} aria-label="navigation primary">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{
@@ -31,7 +31,7 @@ const Nav = () => {
         >
           <div className={styles.logo}>
             <Link href="/">
-              <img src={logo.src} alt="" />
+              <img src={logo.src} alt="Bara T." />
             </Link>
           </div>
         </motion.div>

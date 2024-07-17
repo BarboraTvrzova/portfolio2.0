@@ -41,7 +41,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className={styles.row}>
+    <section id="contact-form" className={styles.row}>
       <h2>Contact Me</h2>
       <div
         className={styles.modal}
@@ -105,6 +105,6 @@ export const ContactForm = () => {
           Send
         </button>
       </form>
-    </div>
+    </section>
   );
 };

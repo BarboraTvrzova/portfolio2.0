@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Barbora Torres",
@@ -18,8 +17,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/images/bara-logo.svg" sizes="any" />
+        <meta name="theme-color" content="#fff" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className="">
+        <Header />
+        <main className="container-full">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

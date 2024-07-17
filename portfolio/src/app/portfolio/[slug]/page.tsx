@@ -18,14 +18,12 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className="px-[8%] pb-4 pt-8 md:px-[5%] lg:px-[11%] lg:pt-16 md:pb-24 lg:pb-28">
-        <Nav />
+      <div className="pb-4 pt-8 md:pb-24 lg:pt-16 lg:pb-28">
         {project && project.key === 99 ? <Featured /> : null}
         {project && project.key !== 99 ? (
           <Project activeProject={project} />
         ) : null}
       </div>
-      <Footer />
     </>
   );
 };
