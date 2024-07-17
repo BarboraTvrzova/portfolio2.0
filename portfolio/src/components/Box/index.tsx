@@ -3,10 +3,10 @@ import { useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import type { HTMLMesh } from "three/examples/jsm/Addons.js";
 import * as THREE from "three";
-import im1 from "../../../public/commercial_projects/samsung.png";
-import im2 from "../../../public/commercial_projects/doritos.png";
-import im3 from "../../../public/commercial_projects/indeed.png";
-import im4 from "../../../public/commercial_projects/salesforce.png";
+import im1 from "../../../public/commercial_projects/tui.png";
+import im2 from "../../../public/commercial_projects/jolly-rancher.png";
+import im3 from "../../../public/commercial_projects/pepsi.png";
+import im4 from "../../../public/commercial_projects/coke.png";
 
 const Box = ({
   wireframe = false,

@@ -4,20 +4,20 @@ import { Canvas } from "@react-three/fiber";
 import { useRef, useState } from "react";
 import Box from "../Box";
 import { motion } from "framer-motion";
-import image_1 from "../../../public/commercial_projects/IMG_5468.jpg";
-import image_2 from "../../../public/commercial_projects/IMG_5469.png";
-import image_3 from "../../../public/commercial_projects/IMG_5470.png";
-import image_4 from "../../../public/commercial_projects/IMG_5471.png";
+import image_1 from "../../../public/commercial_projects/tui_share.png";
+import image_2 from "../../../public/commercial_projects/coke_shre.jpg";
+import image_3 from "../../../public/commercial_projects/jolly-rancher_share.jpg";
+import image_4 from "../../../public/commercial_projects/pepsi_share.png";
 
 const heading = (side: string) => {
   if (side === "front") {
-    return "Samsung";
+    return "Tui";
   } else if (side === "back") {
-    return "Doritos";
+    return "Jolly Ranchers";
   } else if (side === "left") {
-    return "Indeed";
+    return "Coca-Cola Spiced";
   } else if (side === "right") {
-    return "Salesforce";
+    return "Pepsi Pulse";
   }
 };
 
