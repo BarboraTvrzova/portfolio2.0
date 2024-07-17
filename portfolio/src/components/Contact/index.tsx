@@ -2,7 +2,6 @@
 "use client";
 import { ContactForm } from "./ContactForm";
 import { motion } from "framer-motion";
-import Nav from "../Nav";
 import git from "../../../public/images/icons/github.svg";
 import linkedin from "../../../public/images/icons/linkedin.svg";
 import styles from "./Contact.module.css";
@@ -25,13 +24,18 @@ export const ContactUs = ({ text }: { text: string }) => {
           <div className={styles.row_text}>
             <p>{text}</p>
             <div className={styles.icons}>
-              <a href="https://github.com/BarboraTvrzova" target="_blank">
+              <a
+                href="https://github.com/BarboraTvrzova"
+                target="_blank"
+                aria-label="Github"
+              >
                 <Svg src={git.src} />
               </a>
 
               <a
                 href="https://www.linkedin.com/in/barbora-torres-1744741bb/"
                 target="_blank"
+                aria-label="Linkedin"
               >
                 <Svg src={linkedin.src} />
               </a>

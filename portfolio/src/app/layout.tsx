@@ -19,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/bara-logo.svg" sizes="any" />
         <meta name="theme-color" content="#fff" />
       </head>
-      <body className="">
+      <body>
         <Header />
         <main className="container-full">{children}</main>
         <Footer />
