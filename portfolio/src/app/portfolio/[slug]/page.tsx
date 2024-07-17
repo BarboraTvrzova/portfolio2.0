@@ -3,7 +3,8 @@ import Project from "@/components/Project";
 
 import { projects, commercial } from "../page";
 import Footer from "@/components/Footer";
-import SpotifyProjects from "@/components/SpotifyProjects";
+
+import Featured from "@/components/Featured";
 
 const all = [...commercial, ...projects];
 export async function generateStaticParams() {
@@ -19,7 +20,7 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     <>
       <div className="px-[8%] pb-4 pt-8 md:px-[5%] lg:px-[11%] lg:pt-16 md:pb-24 lg:pb-28 ">
         <Nav />
-        {project && project.key === 99 ? <SpotifyProjects /> : null}
+        {project && project.key === 99 ? <Featured /> : null}
         {project && project.key !== 99 ? (
           <Project activeProject={project} />
         ) : null}

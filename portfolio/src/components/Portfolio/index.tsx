@@ -1,26 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import type { ProjectProps } from "../Project";
 import Link from "next/link";
 import Nav from "../Nav";
 import styles from "./Portfolio.module.css";
-import image_1 from "../../../public/commercial_projects/IMG_5468.jpg";
-import image_2 from "../../../public/commercial_projects/IMG_5469.png";
-import image_3 from "../../../public/commercial_projects/IMG_5470.png";
-import image_4 from "../../../public/commercial_projects/IMG_5471.png";
+import image_1 from "../../../public/commercial_projects/pepsi_share.png";
+import image_2 from "../../../public/commercial_projects/jolly-rancher_share.jpg";
+import image_3 from "../../../public/commercial_projects/tui_share.png";
+import image_4 from "../../../public/commercial_projects/coke_shre.jpg";
 
 const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
   const [url, setUrl] = useState("/portfolio");
 
-  const portfolio = projects.map((project: ProjectProps) => {
+  const portfolio_old = projects.map((project: ProjectProps) => {
     return <ProjectPreview project={project} url={url} key={project.name} />;
   });
 
   useEffect(() => {
     window.scroll(0, 0);
-  }, [portfolio]);
+  }, [portfolio_old]);
 
   return (
     <motion.div className={styles.portfolio}>
@@ -35,73 +35,95 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
         }}
       >
         <div>
-          <div className="py-4">
-            <h2>Commercial projects</h2>
+          <div className="py-6">
+            <h2>Featured</h2>
+            <p className="mt-2">
+              These campaigns are currently live. Click to see more info about
+              how you can try them yourself!
+            </p>
           </div>
-          <div className="py-9 border-b border-b-[rgba(51, 50, 61, 0.15)]">
-            <div className="bg-[#33323D] p-3 grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4">
-              <motion.div
-                animate={{
-                  scale: [0.98, 1, 0.98],
-                  transition: {
-                    duration: 0.6,
-                    repeat: Infinity,
-                    repeatDelay: 2.4,
-                  },
-                }}
-                className="w-full h-full flex justify-center items-center"
-              >
-                <img src={image_1.src} alt="" />
-              </motion.div>
-              <motion.div
-                animate={{
-                  scale: [0.98, 1, 0.98],
-                  transition: {
-                    duration: 0.6,
-                    delay: 0.6,
-                    repeat: Infinity,
-                    repeatDelay: 2.4,
-                  },
-                }}
-                className="w-full h-full flex justify-center items-center"
-              >
-                <img src={image_2.src} alt="" />
-              </motion.div>
-              <motion.div
-                animate={{
-                  scale: [0.98, 1, 0.98],
-                  transition: {
-                    duration: 0.6,
-                    delay: 1.2,
-                    repeat: Infinity,
-                    repeatDelay: 2.4,
-                  },
-                }}
-                className="w-full h-full flex justify-center items-center"
-              >
-                <img src={image_3.src} alt="" />
-              </motion.div>
-              <motion.div
-                animate={{
-                  scale: [0.98, 1, 0.98],
-                  transition: {
-                    duration: 0.6,
-                    delay: 1.8,
-                    repeat: Infinity,
-                    repeatDelay: 2.4,
-                  },
-                }}
-                className="w-full h-full flex justify-center items-center"
-              >
-                <img src={image_4.src} alt="" />
-              </motion.div>
-            </div>
+          <div className="pb-9 border-b border-b-[rgba(51, 50, 61, 0.15)]">
+            <Link href={`${url}/campaigns`}>
+              <div className="bg-[#33323D] p-3 grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4 cursor-pointer">
+                <motion.div
+                  animate={{
+                    scale: [0.98, 1, 0.98],
+                    transition: {
+                      duration: 0.6,
+                      repeat: Infinity,
+                      repeatDelay: 2.4,
+                    },
+                  }}
+                  className="w-full h-full flex justify-center items-center"
+                >
+                  <img src={image_1.src} alt="" />
+                </motion.div>
+                <motion.div
+                  animate={{
+                    scale: [0.98, 1, 0.98],
+                    transition: {
+                      duration: 0.6,
+                      delay: 0.6,
+                      repeat: Infinity,
+                      repeatDelay: 2.4,
+                    },
+                  }}
+                  className="w-full h-full flex justify-center items-center"
+                >
+                  <img src={image_2.src} alt="" />
+                </motion.div>
+                <motion.div
+                  animate={{
+                    scale: [0.98, 1, 0.98],
+                    transition: {
+                      duration: 0.6,
+                      delay: 1.2,
+                      repeat: Infinity,
+                      repeatDelay: 2.4,
+                    },
+                  }}
+                  className="w-full h-full flex justify-center items-center"
+                >
+                  <img src={image_3.src} alt="" />
+                </motion.div>
+                <motion.div
+                  animate={{
+                    scale: [0.98, 1, 0.98],
+                    transition: {
+                      duration: 0.6,
+                      delay: 1.8,
+                      repeat: Infinity,
+                      repeatDelay: 2.4,
+                    },
+                  }}
+                  className="w-full h-full flex justify-center items-center"
+                >
+                  <img src={image_4.src} alt="" />
+                </motion.div>
+              </div>
+            </Link>
             <Link href={`${url}/campaigns`} className="btn mt-9 mx-auto">
               Learn more
             </Link>
           </div>
         </div>
       </motion.div>
+
+      <motion.div
+        className={styles.projects}
+        initial={{ opacity: 0, filter: "blur(10px)" }}
+        animate={{
+          opacity: 1,
+          filter: "blur(0)",
+          transition: { duration: 0.3, delay: 0.2 },
+        }}
+      >
+        <div className="py-6">
+          <h2>Commercial Projects</h2>
+          <p className="italic font-light">2022-2024</p>
+        </div>
+      </motion.div>
+
       {url ? (
         <motion.div
           className={styles.projects}
@@ -113,10 +135,10 @@ const Portfolio = ({ projects }: { projects: ProjectProps[] }) => {
           }}
         >
           <div className="py-6">
-            <h2>Personal projects</h2>
+            <h2>Personal projects/learning</h2>
             <p className="italic font-light">2020-2022</p>
           </div>
-          <motion.div>{portfolio}</motion.div>
+          <motion.div>{portfolio_old}</motion.div>
         </motion.div>
       ) : null}
     </motion.div>

@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
+import { Metadata } from "next";
 import React from "react";
 
 export const commercial = [
@@ -91,6 +92,11 @@ export const projects = [
       "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Barbora Torres | Portfolio",
+  description: "Frontend developer portfolio",
+};
 
 const PortfolioPage = () => {
   return (

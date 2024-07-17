@@ -33,33 +33,59 @@ const description = (side: string) => {
   }
 };
 
-const SpotifyProjects = () => {
+const link = (side: string) => {
+  if (side === "front") {
+    return "https://open.spotify.com/presents/tui";
+  } else if (side === "back") {
+    return "https://open.spotify.com/presents/jolly-rancher";
+  } else if (side === "left") {
+    return "https://open.spotify.com/presents/coca-cola-spiced";
+  } else if (side === "right") {
+    return "https://open.spotify.com/presents/pepsi";
+  }
+};
+
+const Featured = () => {
   const ref = useRef<HTMLCanvasElement | null>(null);
 
   const [side, setSide] = useState("");
 
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       className="h-full"
     >
-      <h1 className="">Commercial projects</h1>
+      <h1 className="">Featured</h1>
       <div className="py-12 grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center">
-        <div className="">
+        <div>
           <div className=" bg-[#33323D] p-3 grid grid-cols-4 gap-3 md:grid-cols-4 lg:grid-cols-4">
-            <div className="w-full h-full flex justify-center items-center">
-              <img src={image_1.src} alt="" />
-            </div>
-            <div className="w-full h-full flex justify-center items-center">
-              <img src={image_2.src} alt="" />
-            </div>
-            <div className="w-full h-full flex justify-center items-center">
-              <img src={image_3.src} alt="" />
-            </div>
-            <div className="w-full h-full flex justify-center items-center">
-              <img src={image_4.src} alt="" />
-            </div>
+            <a href="https://open.spotify.com/presents/tui" target="_blank">
+              <div className="w-full h-full flex justify-center items-center po">
+                <img src={image_1.src} alt="" />
+              </div>
+            </a>
+            <a
+              href="https://open.spotify.com/presents/coca-cola-spiced"
+              target="_blank"
+            >
+              <div className="w-full h-full flex justify-center items-center">
+                <img src={image_2.src} alt="" />
+              </div>
+            </a>
+            <a
+              href="https://open.spotify.com/presents/jolly-rancher"
+              target="_blank"
+            >
+              <div className="w-full h-full flex justify-center items-center">
+                <img src={image_3.src} alt="" />
+              </div>
+            </a>
+            <a href="https://open.spotify.com/presents/pepsi" target="_blank">
+              <div className="w-full h-full flex justify-center items-center">
+                <img src={image_4.src} alt="" />
+              </div>
+            </a>
           </div>
         </div>
         <div>
@@ -69,9 +95,13 @@ const SpotifyProjects = () => {
           </p>
           <p>
             These campaigns are specifically created for Spotify mobile app and
-            won&apos;t run on a desktop, that is why I am adding QR codes. Once
-            you scan it, it will open Spotify app on the campaign. All of these
-            feature audio as well, so best to unmute your phone and have fun!
+            won&apos;t run on a desktop or in a browser. That is why I am adding
+            QR codes that can be scanned with any mobile device - once scanned,
+            it will open the campaign in your Spotify. All of these feature
+            audio as well, so best to unmute your phone and have fun!
+            Alternativelly, if you already are viewing this page on a mobile
+            device, you can click on the campaign image itself to launch the
+            campaign.
           </p>
         </div>
       </div>
@@ -96,11 +126,13 @@ const SpotifyProjects = () => {
             transition: { duration: 0.3, ease: "easeInOut", delay: 0.1 },
           }}
         >
-          <img
-            src={description(side)}
-            alt=""
-            className="w-full h-full object-contain object-center"
-          />
+          <a href={link(side)} target="_blank">
+            <img
+              src={description(side)}
+              alt=""
+              className="w-full h-full object-contain object-center"
+            />
+          </a>
         </motion.div>
         <div className="aspect-square bg-[#33323D] w-full relative">
           <p className="absolute text-white text-xs bottom-1 right-2">
@@ -109,15 +141,14 @@ const SpotifyProjects = () => {
           <Canvas
             style={{ height: "100%", width: "100%" }}
             camera={{ position: [0, 0, 1.5] }}
-            className=""
             ref={ref}
           >
             <Box setSide={setSide} />
           </Canvas>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 
-export default SpotifyProjects;
+export default Featured;
